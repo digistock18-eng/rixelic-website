@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rixelic Portfolio</title>
+
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+body { font-family: 'Poppins', sans-serif; }
+
+/* Glass effect */
+.glass {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(30, 15, 238, 0.2);
+}
+
+/* Animation */
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.8s ease;
+}
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
+
+</head>
+<body class="text-gray-800">
+
+<!-- NAVBAR -->
+<header class="fixed w-full top-0 z-50 bg-white/10 backdrop-blur-lg border-b border-white/20">
+  <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4 text-white">
+    <h1 class="font-bold text-xl">Rixelic</h1>
+    <nav class="space-x-6 hidden md:block">
+      <a href="#home">Home</a>
+      <a href="#work">Work</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="home" class="min-h-screen flex items-center px-6 
+bg-gradient-to-r from-blue-600 via-purple-600 to-pink-500 text-white">
+
+<div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+
+<!-- TEXT -->
+<div class="fade-up">
+  <h1 class="text-4xl md:text-5xl font-bold mb-4">
+    Build Clean & Modern Designs
+  </h1>
+  <p class="mb-6 text-gray-200">
+    High-quality branding, UI design & social media creatives for growing businesses.
+  </p>
+
+  <a href="https://wa.me/918951692195"
+     class="bg-white text-black px-6 py-3 rounded-lg font-semibold shadow-lg hover:scale-105 transition">
+     Start Project
+  </a>
+</div>
+
+<!-- IMAGE (GLASS CARD) -->
+<div class="flex justify-center fade-up">
+  <div class="glass p-4 rounded-2xl shadow-2xl">
+    <img src="Assets/images/hero.jpg" alt="Hero Image">
+         class="rounded-xl w-80">
+  </div>
+</div>
+
+</div>
+</section>
+
+<!-- WORK -->
+<section id="work" class="py-20 px-6 bg-gray-50">
+<h2 class="text-3xl font-bold text-center mb-10">My Work</h2>
+
+<div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
+<!-- CARD -->
+<div class="bg-white rounded-xl shadow hover:shadow-xl transition overflow-hidden fade-up">
+ <img src="Assets/images/work-1.jpg" alt="Work 1">
+</div>
+
+<div class="bg-white rounded-xl shadow hover:shadow-xl transition overflow-hidden fade-up">
+ <img src="Assets/images/work-2.jpg" alt="Work 2">
+</div>
+
+<div class="bg-white rounded-xl shadow hover:shadow-xl transition overflow-hidden fade-up">
+ <img src="Assets/images/work-3.jpg" alt="Work 3">
+</div>
+
+</div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="py-20 px-6 text-center bg-white">
+<h2 class="text-3xl font-bold mb-10">Services</h2>
+
+<div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+
+<div class="p-6 rounded-xl shadow hover:scale-105 transition fade-up">
+<h4 class="font-semibold mb-2">Branding Design</h4>
+<p class="text-gray-500 text-sm">Logo & brand identity</p>
+</div>
+
+<div class="p-6 rounded-xl shadow hover:scale-105 transition fade-up">
+<h4 class="font-semibold mb-2">Social Media</h4>
+<p class="text-gray-500 text-sm">Creative posts & ads</p>
+</div>
+
+<div class="p-6 rounded-xl shadow hover:scale-105 transition fade-up">
+<h4 class="font-semibold mb-2">UI Design</h4>
+<p class="text-gray-500 text-sm">Modern website UI</p>
+</div>
+
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-20 text-center px-6 
+bg-gradient-to-r from-blue-600 via-purple-600 to-pink-500 text-white">
+
+<h2 class="text-3xl font-bold mb-4">Let’s Work Together</h2>
+<p class="mb-6">Start your project today</p>
+
+<a href="https://wa.me/918951692195"
+class="bg-white text-black px-6 py-3 rounded-lg font-semibold">
+Contact on WhatsApp
+</a>
+
+</section>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/918951692195"
+class="fixed bottom-5 right-5 bg-green-500 text-white px-4 py-3 rounded-full shadow-lg">
+WhatsApp
+</a>
+
+<!-- SCRIPT -->
+<script>
+const items = document.querySelectorAll(".fade-up");
+window.addEventListener("scroll", () => {
+  items.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if(top < window.innerHeight - 100){
+      el.classList.add("show");
+    }
+  });
+});
+</script>
+
+</body>
+</html>
